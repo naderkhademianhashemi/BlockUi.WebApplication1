@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>The Window Object</h1>
+    <h2>The setTimeout() Method</h2>
+
+    <p>Wait 5 seconds for the greeting:</p>
+    
+    <input id="Button1" type="button" value="button" onclick="myfunction()" />
+
+    <h2 id="demo"></h2>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/jquery.blockUI.js"></script>
+    <script>
+       
+        function myfunction() {
+            $.blockUI({ css: { backgroundColor: 'gray', color: 'white' } });
+            const myTimeout = setTimeout(myGreeting, 5000);
+
+            function myGreeting() {
+                $.unblockUI();
+            }
+
+            
+        }
+       
+
+        
+        
+    </script>
+
+</body>
+</html>
